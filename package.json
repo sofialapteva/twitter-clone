@@ -1,0 +1,28 @@
+{
+  "name": "assessment-2d-wolves2020-online",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofialapteva/assessment-2d-wolves2020-online.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sofialapteva/assessment-2d-wolves2020-online/issues"
+  },
+  "homepage": "https://github.com/sofialapteva/assessment-2d-wolves2020-online#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "faker": "^5.1.0",
+    "filestack-js": "^3.20.0",
+    "mongoose": "^5.11.8"
+  }
+}

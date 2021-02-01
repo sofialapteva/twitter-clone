@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="shortcut icon" type="image/jpg" href="/img/bird.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Quacker</title>
+</head>
+<nav class="border-2 border-black h-14 bg-yellow-500 flex justify-around items-center lg:text-xl"
+  style="font-family: 'Press Start 2P', cursive;">
+  <a href="/">
+    <img src="/img/bird.svg" alt="" class="h-12">
+  </a>
+  {{#if userId}}
+    <span>Привет, {{username}}</span>
+    <a href="/account">Личный кабинет</a>
+    <a href="/logout">Выйти</a>
+  {{else}}
+    <a href="/account/login">Войти</a>
+    <a href="/account/register">Зарегистрироваться</a>
+  {{/if}}
+</nav>
+
+<body style="font-family: 'Press Start 2P', cursive;">
+  <div class="w-9/12 lg:w-6/12 mx-auto  text-sm lg:text-lg">
+    {{{body}}}
+  </div>
+</body>
+
+</html>

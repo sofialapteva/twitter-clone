@@ -1,0 +1,16 @@
+<script defer src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+<script defer src='/js/index.js'></script>
+{{!-- {{#if userId}} --}}
+<p class="text-3xl text-center my-3">Редактировать кряк</p>
+<form name='newPostForm' class="flex flex-col leading-loose" action='/edit/{{post._id}}' method='POST'
+  data-delete='{{post._id}}'>
+  <textarea name="twit" cols="30" rows="3" class="border-2 border-black my-3" required>{{post.twit}}</textarea>
+  <input type="hidden" name='prevImg' value="{{post.img}}">
+  <input type="hidden" name='createdAt' value="{{post.createdAt}}">
+  <input type="hidden" name='likes' value="{{post.likes}}">
+
+  Если желаете изменить картинку,
+  <input type="file" id='picture' class="my-3">
+  <button type="submit" class="bg-yellow-500 border-2 border-black my-3 text-center text-2xl">Крякнуть
+    по-новому!</button>
+</form>

@@ -1,0 +1,35 @@
+<script defer src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+<script defer src='/js/index.js'></script>
+{{#if userId}}
+  <p class="text-3xl text-center my-3">Новый кряк</p>
+  <form name='newPostForm' class="flex flex-col leading-loose">
+    <textarea name="twit" cols="30" rows="3" placeholder="Введите текст кряка" class="border-2 border-black my-3"
+      required></textarea>
+    <input type="file" id='picture' class="my-3" required>
+    <button type="submit" class="bg-yellow-500 border-2 border-black my-3 text-center text-2xl">Крякнуть!</button>
+  </form>
+{{else}}
+  <p class=" my-5 text-center">Чтобы крякнуть, зарегистрируйтесь, пожалуйста</p>
+{{/if}}
+{{#each posts}}
+  <div class="border-2 border-black" id='{{this.id}}'>
+    <div class="flex">
+      <div class="w-4/12 h-full border-2 border-black">
+        <img src="{{this.img}}" class="w-full">
+      </div>
+      <div class="w-7/12  pl-2">
+        <p>{{this.userId.username}} крякнул:</p>
+        <div style="overflow-wrap: break-word;"> {{this.twit}}</div>
+      </div>
+      <div class="w-1/12 flex flex-col items-center">
+        <div class="like flex flex-col items-center" data-like='{{this._id}}'>
+          <div><img src="/img/like.svg" class="h-8"></div>
+          <div class='like-amount'>{{this.likes}}</div>
+        </div>
+        <div class="edit my-2"><a href="/edit/{{this._id}}"><img src="/img/pen.svg" class="h-8"></a></div>
+        <div class='delete' data-delete='{{this._id}}'><img src="/img/bin.svg" class="h-8"></div>
+      </div>
+    </div>
+    <span style="font-size: 8px;">Крякнуто {{this.createdAt}}</span>
+  </div>
+{{/each}}

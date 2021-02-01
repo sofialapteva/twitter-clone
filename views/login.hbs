@@ -1,0 +1,9 @@
+<h2 class="text-3xl text-center my-4">Вход</h2>
+<p class="text-red-600">{{error}}</p>
+<form action="/account/login" method="POST" class="flex flex-col leading-loose min-h-9/12 my-3 text-center text-xl">
+  <input type="text" name='email' placeholder="Введите email"
+    class="h-10 border-2 border-black my-3 text-center text-xl" required>
+  <input type="password" name='password' placeholder="Введите пароль"
+    class="h-10 border-2 border-black my-3 text-center text-xl" required>
+  <button type="submit" class="bg-yellow-500 border-2 border-black my-3 text-center text-2xl">Войти</button>
+</form>

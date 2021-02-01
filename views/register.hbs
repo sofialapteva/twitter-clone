@@ -1,0 +1,16 @@
+<script defer src="/js/checkPassword.js"></script>
+<h2 class="lg:text-3xl text-xl text-center my-4">Регистрация</h2>
+<div id="error">{{error}}</div>
+<form action="/account/register" method="POST" name='registerForm'
+  class="flex flex-col leading-loose min-h-9/12 my-3 text-center text-xl">
+  <input type="text" name='email' placeholder="Введите email"
+    class="h-10 border-2 border-black my-3 text-center text-xl" required>
+  <input type="text" name='username' placeholder="Введите имя"
+    class="h-10 border-2 border-black my-3 text-center text-xl" required>
+  <input type="password" name='password' placeholder="Введите пароль"
+    class="h-10 border-2 border-black my-3 text-center text-xl" required>
+  <input type="password" name='passwordCheck' placeholder="Повторите пароль"
+    class="h-10 border-2 border-black my-3 text-center text-xl" required>
+  <button type="submit"
+    class="bg-yellow-500 border-2 border-black my-3 text-center lg:text-2xl">Зарегистрироваться</button>
+</form>
